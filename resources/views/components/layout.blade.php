@@ -19,10 +19,10 @@
       <h4>CampusOne</h4>
     </div>
     <ul class="items-list">
-      <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="#"><i class="fas fa-book"></i> Courses</a></li>
-      <li><a href="#"><i class="fas fa-users"></i> Students</a></li>
-      <li><a href="#"><i class="fas fa-clipboard-list"></i> Exams</a></li>
+      <li><a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}"><i class="fas fa-home"></i> Home</a></li>
+      <li><a class="nav-link {{ request()->routeIs('course.*') ? 'active' : '' }}" href="{{ route('course.index') }}"><i class="fas fa-book"></i> Courses</a></li>
+      <li><a class="nav-link {{ request()->routeIs('student.*') ? 'active' : '' }}" href="{{ route('student.index') }}"><i class="fas fa-users"></i> Students</a></li>
+      <li><a class="nav-link {{ request()->routeIs('exam.*') ? 'active' : '' }}" href="{{ route('exam.index') }}"><i class="fas fa-clipboard-list"></i> Exams</a></li>
     </ul>
   </nav>
 
