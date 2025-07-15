@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-color: #F1F5F9;
+  --sidebar-color: #FFFFFF;
+  --hover-color: #EEF2FF;
+  --active-color: #4F46E5;
+  --accent-color: #3B82F6;
+  --text-color: #0F172A;
+  --light-border: #E2E8F0;
+  --font-main: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+body {
+  background: var(--bg-color);
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background-color: var(--sidebar-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: 1px solid var(--light-border);
+  color: var(--text-color);
+}
+
+.sidebar-header {
+  height: 64px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--light-border);
+}
+
+.sidebar-header .logo {
+  width: 30px;
+  height: 37px;
+  margin-right: 10px;
+}
+
+.items-list {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.items-list li {
+  padding: 8px 20px;
+}
+
+.items-list a {
+  color: var(--text-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  transition: background 0.2s ease, color 0.2s ease;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.items-list li:hover {
+  background-color: var(--hover-color);
+  border-radius: 8px;
+}
+
+.items-list li:hover a {
+  color: var(--active-color);
+}
+
+/* Active Menu Item */
+.items-list li.active {
+  background-color: var(--hover-color);
+}
+
+.items-list li.active a {
+  color: var(--active-color);
+  font-weight: 600;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Top Navbar */
+.top-navbar {
+  height: 64px;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--light-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 8px 14px;
+  border: 1px solid var(--light-border);
+  border-radius: 8px;
+  background-color: #F8FAFC;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.profile-section {
+  gap: 20px;
+}
+
+.profile-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
