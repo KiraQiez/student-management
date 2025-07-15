@@ -1,65 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 :root {
-    --background-color: #EAEEF3;
-    --pop-color: #fff;
-    --active-font-color: #B03060;
-    --softer-color: #c4436e;
-
+  --bg-color: #F9FBFC;
+  --sidebar-color: #E3F2FD;
+  --hover-color: #BBDEFB;
+  --text-color: #0D1B2A;
+  --accent-color: #1976D2;
+  --font-main: 'Poppins', sans-serif;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
 }
 
 body {
-    min-height: 100vh;
-    background: var(--background-color);
+  background: var(--bg-color);
+  display: flex;
 }
 
+/* Sidebar */
 .sidebar {
-    width: 250px;
-    height: 100vh;
-    background: var(--pop-color);
-    position: fixed;
-    top: 0;
-    left: 0;
-    border: 1px solid #efefef;
+  width: 240px;
+  height: 100vh;
+  background-color: var(--sidebar-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: 1px solid #cfd8dc;
+  color: var(--text-color);
 }
 
 .sidebar-header {
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #efefef;
-
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid #cfd8dc;
 }
 
-.items-list{
-    list-style: none;
-    padding: 20px;
-    margin: 10px 0;
+.items-list {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
 }
 
 .items-list li {
-    padding: 10px 15px;
-    cursor: pointer;
-    
+  padding: 15px 20px;
 }
 
 .items-list a {
-    
-    color: var(--active-font-color);
+  color: var(--text-color);
+  text-decoration: none; 
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  transition: background 0.3s ease; 
 }
 
 .items-list li:hover {
-    background: #EAEEF3;
-    border-radius: 10px;
-    
+  background-color: var(--hover-color);
+  border-radius: 8px;
 }
 
 .items-list li:hover a {
-    text-decoration: none;
+  text-decoration: none;       
+  color: var(--text-color);     
+}
+
+
+/* Main Content Area */
+.main-content {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  background: var(--bg-color);
+  min-height: 100vh;
+  color: var(--text-color);
 }
